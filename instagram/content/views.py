@@ -10,16 +10,20 @@ def home_view(request):
     return render(request, 'home.html')
 
 
-class UserView(generic.DetailView, generic.FormView):
-    form_class = PhotoPostForm
-    queryset = User.objects.all()
+class UserView(generic.DetailView):
     model = User
     template_name = "user.html"
 
 
+class PostView(generic.DetailView):
+    model = User
+    template_name = "post.html"
+
+
 class CreatePostView(generic.CreateView):
     form_class = PhotoPostForm
-    template_name = "succes_upload.html"
+    model = PhotoPost
+    template_name = "upload.html"
 
 
 
