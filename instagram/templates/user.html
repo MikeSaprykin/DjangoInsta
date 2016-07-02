@@ -16,6 +16,8 @@
                 <div class="col-md-12">
                     <a href="/user"><img src="../static/images/logo.png" alt="Django Girls Logo"></a>
 
+                    <a href="{% url 'create-post' %}">GO</a>
+
                         <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <a href="/user">Hello,Jenifer!</a>
@@ -34,12 +36,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h2>Detail View</h2>
-                    <form method="POST" method="POST" action="{% url 'create-post' %}">
-                        {% csrf_token %}
-                        {{ form }}
-                        <button type="submit">Go</button>
-                    </form>
                 </div>
               <div class=" col-md-3">
                 <a href="/post" class="thumbnail" style="background-image:url(../static/images/pic1.jpg) ">
