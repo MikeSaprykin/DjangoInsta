@@ -21,9 +21,13 @@ class PostView(generic.DetailView):
 
 
 class CreatePostView(generic.CreateView):
-    form_class = PhotoPostForm
+    # form_class = PhotoPostForm
     model = PhotoPost
     template_name = "upload.html"
+    fields = ['author', 'image', 'description']
+
+
+
 
 
 
