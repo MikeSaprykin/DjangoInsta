@@ -13,6 +13,8 @@
                            style="background-image:url({{ m.image.url }}) ">
                         </a>
                     </div>
+                {% empty %}
+                    <h2>У пользователя пока нет записей :(</h2>
                 {% endfor %}
             </div>
         </div>

@@ -18,10 +18,10 @@ class UserView(mixins.LoginRequiredMixin, generic.DetailView):
     """
     model = User
     template_name = "user.html"
-    context_object_name = "user"
+    context_object_name = "author"
 
     def get_context_data(self, **kwargs):
-        kwargs['media'] = PhotoPost.objects.filter(author=self.request.user)
+        kwargs['media'] = PhotoPost.objects.filter(author=self.object)
         return super(UserView, self).get_context_data(**kwargs)
 
 
