@@ -2,15 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User View</title>
+    <title>Django Girls</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    Detail View
-    <form method="POST">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">Go</button>
-    </form>
+    <header id="header" style="padding:15px; border-bottom:2px solid #F69433;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="index.html"><img src="images/logo.png" alt="Django Girls Logo"></a>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="index.html">Hello,Jenifer!</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><i class="glyphicon glyphicon-log-out"></i></a>
+                            </li>
+                        </ul>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2>Detail View</h2>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form }}
+                        <button type="submit">Go</button>
+                    </form>
+                </div>
+              <div class=" col-md-3">
+                <a href="media.html" class="thumbnail" style="background-image:url(images/pic1.jpg) ">
+                </a>
+              </div>
+                <div class=" col-md-3">
+                <a href="#" class="thumbnail" style="background-image:url(images/pic2.jpg) ">
+                </a>
+              </div>
+                <div class=" col-md-3">
+                <a href="#" class="thumbnail" style="background-image:url(images/pic3.jpg) ">
+                </a>
+              </div>
+                <div class=" col-md-3">
+                <a href="#" class="thumbnail" style="background-image:url(images/pic4.jpg) ">
+                </a>
+              </div>
+                <div class=" col-md-3">
+                <a href="#" class="thumbnail" style="background-image:url(images/pic5.jpg) ">
+                </a>
+              </div>
+                <div class=" col-md-3">
+                <a href="#" class="thumbnail" style="background-image:url(images/pic6.jpg) ">
+                </a>
+              </div>
+                <div class="col-md-3">
+                <a href="#" class="thumbnail" style="background-image:url(images/pic7.jpg) ">
+                </a>
+              </div>
+                <div class="col-md-3">
+                <a href="#" class="thumbnail" style="background-image:url(images/pic8.jpg) ">
+                </a>
+              </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
