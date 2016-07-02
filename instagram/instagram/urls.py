@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from content.views import UserView, home_view
+from content.views import UserView, CreatePostView, home_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^account/', include('django.contrib.auth.urls')),
     url(r'^$', home_view),
+    url(r'^users/$', CreatePostView.as_view(), name='create-post'),
     url(r'^user/(?P<pk>[0-9]+)', UserView.as_view()),
     url(r'^media/(?P<pk>[0-9]+)', UserView.as_view()),
 ]

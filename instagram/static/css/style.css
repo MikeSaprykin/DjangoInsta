@@ -1,0 +1,19 @@
+header{
+    padding:15px;
+    border-bottom:2px solid #F69433;
+}
+
+section#main{
+    margin-top:25px;
+}
+
+.centered-form{
+	margin-top: 60px;
+}
+
+.col-md-3 a{
+    height:260px;
+    background-size:cover;
+    background-position:center center;
+}
+
