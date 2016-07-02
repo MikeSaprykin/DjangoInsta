@@ -2,11 +2,7 @@ from django import forms
 from .models import *
 
 
-class PhotoPostForm(forms.Form):
+class PhotoPostForm(forms.ModelForm):
     class Meta:
         model = PhotoPost
-
-
-class CommentForm(forms.Form):
-    class Meta:
-        model = Comment
+        fields = "__all__"
