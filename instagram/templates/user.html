@@ -6,7 +6,7 @@
 </head>
 <body>
     Detail View
-    <form method="POST">
+    <form method="POST" action="{% url 'create-post' %}">
         {% csrf_token %}
         {{ form }}
         <button type="submit">Go</button>

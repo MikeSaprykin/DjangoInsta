@@ -7,20 +7,19 @@ from content.models import PhotoPost
 
 
 def home_view(request):
-    return render(request, 'templates/home.html')
+    return render(request, 'home.html')
 
 
-class UserView(generic.DetailView, generic.CreateView, generic.FormView):
+class UserView(generic.DetailView, generic.FormView):
     form_class = PhotoPostForm
     queryset = User.objects.all()
     model = User
     template_name = "user.html"
 
-    def post(self, request, *args, **kwargs):
 
-        return super(UserView, self).post(request, *args, **kwargs)
-
-
+class CreatePostView(generic.CreateView):
+    form_class = PhotoPostForm
+    template_name = "succes_upload.html"
 
 
 
