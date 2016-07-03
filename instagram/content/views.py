@@ -9,7 +9,8 @@ from content.models import PhotoPost
 
 
 def home_view(request):
-    return render(request, 'home.html')
+    posts = PhotoPost.objects.all()
+    return render(request, 'home.html', {'posts':posts})
 
 
 class UserView(mixins.LoginRequiredMixin, generic.DetailView):
